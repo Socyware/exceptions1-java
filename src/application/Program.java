@@ -35,9 +35,7 @@ public class Program {
 			System.out.print(" Check-out date (dd/MM/yyyy): ");
 			checkOut = sdf.parse(sc.next());
 
-			reservation.updateDates(checkIn, checkOut);
-			System.out.println(" Reservation " + reservation);
-
+			
 			Date now = new Date();
 			if (checkIn.before(now) || checkOut.before(now)) {
 				System.out.println(" Error in reservation: Reservation dates for update must be future dates ");
@@ -49,6 +47,10 @@ public class Program {
 				reservation.updateDates(checkIn, checkOut);
 			    System.out.println(" Reservation " + reservation);
 			    }
+			
+			reservation.updateDates(checkIn, checkOut);
+			System.out.println(" Reservation " + reservation);
+
 
 		}
 
